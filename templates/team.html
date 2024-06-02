@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チーム編成エミュレータ</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">編成エミュレータ</h1>
+        <div class="outer-container">
+            <div class="team-container">
+                <div class="team-slot-container">
+                    <div class="team-slot" onclick="openCharacterList(0, 'main')"></div>
+                    <div class="support-slot" onclick="openCharacterList(0, 'support')"></div>
+                    <div id="slot1-names" class="character-names">
+                        <div id="main-slot1-name" class="character-name"></div>
+                        <div id="support-slot1-name" class="character-name"></div>
+                    </div>
+                </div>
+                <div class="team-slot-container">
+                    <div class="team-slot" onclick="openCharacterList(1, 'main')"></div>
+                    <div class="support-slot" onclick="openCharacterList(1, 'support')"></div>
+                    <div id="slot2-names" class="character-names">
+                        <div id="main-slot2-name" class="character-name"></div>
+                        <div id="support-slot2-name" class="character-name"></div>
+                    </div>
+                </div>
+                <div class="team-slot-container">
+                    <div class="team-slot" onclick="openCharacterList(2, 'main')"></div>
+                    <div class="support-slot" onclick="openCharacterList(2, 'support')"></div>
+                    <div id="slot3-names" class="character-names">
+                        <div id="main-slot3-name" class="character-name"></div>
+                        <div id="support-slot3-name" class="character-name"></div>
+                    </div>
+                </div>
+                <div class="team-slot-container">
+                    <div class="team-slot" onclick="openCharacterList(3, 'main')"></div>
+                    <div class="support-slot" onclick="openCharacterList(3, 'support')"></div>
+                    <div id="slot4-names" class="character-names">
+                        <div id="main-slot4-name" class="character-name"></div>
+                        <div id="support-slot4-name" class="character-name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="character-list" id="characterList">
+            <div class="attribute-buttons">
+                <button class="btn fire" onclick="loadCharacters('火属性')">火</button>
+                <button class="btn water" onclick="loadCharacters('水属性')">水</button>
+                <button class="btn wind" onclick="loadCharacters('風属性')">風</button>
+                <button class="btn light" onclick="loadCharacters('光属性')">光</button>
+                <button class="btn dark" onclick="loadCharacters('闇属性')">闇</button>
+            </div>
+            <div class="character-items"></div>
+        </div>
+    </div>
+    <script>
+        const charactersData = {{ characters | tojson | safe }};
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

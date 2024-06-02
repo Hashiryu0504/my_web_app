@@ -1,0 +1,135 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid rgba(120, 52, 10, 0.785);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 237, 218);
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+}
+
+.team-slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    /* border: 1px solid #dddddd; */
+    border-radius: 5px;
+    background-color: #deb68b;
+    box-shadow: 0 4px 8px hsl(0, 0%, 100%);
+    flex: 1;
+    min-width: 0;
+}
+
+.team-slot, .support-slot {
+    width: 100%;
+    height: auto;
+    border: 5px solid  rgb(132, 95, 57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.team-slot img, .support-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.support-slot {
+    width: 80%;
+    height: 42%;
+    padding: 0;
+}
+
+.character-list {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: 2px solid #000;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attribute-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.attribute-buttons button {
+    width: 18%;
+    border: 2px solid black;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* 黒い縁取りを追加 */
+}
+
+.attribute-buttons .fire {
+    background-color: red;
+}
+
+.attribute-buttons .water {
+    background-color: darkblue;
+}
+
+.attribute-buttons .wind {
+    background-color: yellowgreen;
+}
+
+.attribute-buttons .light {
+    background-color: yellow;
+}
+
+.attribute-buttons .dark {
+    background-color: rebeccapurple;
+}
+
+.character-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.character-item {
+    width: calc(16% - 0px); /* 5キャラを横一列に表示 */
+    /* margin: 5px; */
+    cursor: pointer;
+    text-align: center;
+}
+
+.character-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
