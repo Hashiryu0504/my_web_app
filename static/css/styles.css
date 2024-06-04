@@ -33,8 +33,8 @@
 }
 
 .team-slot, .support-slot {
-    width: 100%;
-    padding-top: 100%; /* 正方形にする */
+    width: 130%;
+    padding-top: 130%; /* 正方形にする */
     position: relative;
     border: 1px solid rgb(132, 95, 57);
     display: flex;
@@ -58,7 +58,7 @@
 .support-slot {
     width: 0;
     height: 0;
-    padding: 40%;
+    padding: 50%;
 }
 
 .character-list {
