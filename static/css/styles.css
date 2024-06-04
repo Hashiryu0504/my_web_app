@@ -5,7 +5,7 @@
     width: 100%;
     overflow: hidden;
     border: 2px solid rgba(120, 52, 10, 0.785);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(255, 237, 218);
@@ -25,16 +25,17 @@
     align-items: center;
     flex: 1 1 25%; /* これで横に4つ並べます */
     margin: 0; /* 隙間をなくします */
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     background-color: #deb68b;
     /* box-shadow: 0 4px 8px hsl(0, 0%, 100%); */
     box-sizing: border-box;
+    width: 100%;
 }
 
 .team-slot, .support-slot {
-    width: 130%;
-    padding-top: 130%; /* 正方形にする */
+    width: 100%;
+    padding-top: 100%; /* 正方形にする */
     position: relative;
     border: 1px solid rgb(132, 95, 57);
     display: flex;
@@ -58,7 +59,7 @@
 .support-slot {
     width: 0;
     height: 0;
-    padding: 50%;
+    padding: 40%;
 }
 
 .character-list {
