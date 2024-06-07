@@ -10,12 +10,14 @@ def load_character_data(attribute):
     try:
         with open(csv_file_path, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
+            print('utf')
             for row in reader:
                 print(row)
                 character_data.append(row)
     except UnicodeDecodeError:
         with open(csv_file_path, mode='r', newline='', encoding='shift_jis') as file:
             reader = csv.DictReader(file)
+            print('shiftjs')
             for row in reader:
                 character_data.append(row)
     print(f"Loaded {len(character_data)} characters for attribute {attribute}")  # デバッグ用ログ

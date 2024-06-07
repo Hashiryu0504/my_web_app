@@ -16,11 +16,12 @@ function openCharacterList(slotIndex, slotType) {
 
 function loadCharacters(attribute) {
     console.log(`Loading characters for attribute: ${attribute}`); // デバッグ用ログ
+    console.log(attribute)
     const url = `/characters/${attribute}`;
     console.log(`Fetching URL: ${url}`); // デバッグ用ログ
     fetch(url)
         .then(response => {
-            console.log(`Response status: ${response.status}`);
+            // console.log(`Response status: ${response.status}`);
             return response.json();
         })
         .then(data => {
